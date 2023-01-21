@@ -77,12 +77,53 @@ html {
     color: hsl(228, 12%, 48%);
 }
 
-.btn {
-    background-color: hsl(159, 35%, 19%);
+.btn a{
+    background-color: hsl(158, 36%, 37%);
     color: white;
+    display: block;
+    text-align: center;
+    width: 100%;
     font-size: 20px;
     padding: 15px;
-    margin: 20px;
-    text-align: center;
     border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn a:hover {
+    background-color: hsl(159, 35%, 19%);
+}
+
+@media (max-width: 750px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px 1fr;
+        grid-template-areas: "img"
+                             "informacoes";
+        margin: auto;
+    }
+
+    .img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .informacoes h2{
+        font-size: 16px;
+        min-width: 400px;
+    }
+
+    .informacoes h1 {
+        font-size: 35px;
+        padding: 5px;
+    }
+
+    .informacoes .texto {
+        padding: 5px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
 }
